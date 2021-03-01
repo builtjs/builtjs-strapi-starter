@@ -1,5 +1,4 @@
 # Built.JS Strapi Starter
-
 A starter project used for Built.JS Strapi projects. 
 
 ## What is theis project used for
