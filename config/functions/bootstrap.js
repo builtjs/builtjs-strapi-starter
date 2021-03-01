@@ -10,4 +10,6 @@
  * See more details here: https://strapi.io/documentation/developer-docs/latest/concepts/configurations.html#bootstrap
  */
 
-module.exports = () => {};
+module.exports = async () => {
+    await strapi.config.functions.setup();
+};
