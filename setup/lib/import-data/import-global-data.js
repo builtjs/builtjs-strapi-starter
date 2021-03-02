@@ -1,5 +1,5 @@
 const fileUtils = require('./../file-utils');
-const { global } = require("./../../data");
+const { global } = require("./../../data/data.json");
 
 async function importGlobalData() {
     // Add images

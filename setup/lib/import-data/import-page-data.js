@@ -2,7 +2,7 @@ const setup = require('./../../../setup/lib');
 const createEntry = require('./../create-entry');
 const fileUtils = require('./../file-utils');
 
-const { pages } = require("./../../data");
+const { pages } = require("./../../data/data.json");
 
 async function importPageData() {
     const getPageCover = slug => {
