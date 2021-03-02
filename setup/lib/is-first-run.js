@@ -9,4 +9,4 @@ async function isFirstRun(strapi) {
   return !initHasRun;
 }
 
-exports.isFirstRun = isFirstRun;
+module.exports = isFirstRun;

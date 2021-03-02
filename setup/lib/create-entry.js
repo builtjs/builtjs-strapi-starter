@@ -17,5 +17,4 @@ async function createEntry(strapi, model, entry, files) {
       console.log(e);
     }
   }
-
-exports.createEntry = createEntry;
+module.exports = createEntry;

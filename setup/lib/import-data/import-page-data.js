@@ -1,11 +1,14 @@
 const setup = require('./../../../setup/lib');
+const createEntry = require('./../create-entry');
+const fileUtils = require('./../file-utils');
+
 const { pages } = require("./../../data");
 
 async function importPageData() {
     const getPageCover = slug => {
       switch (slug) {
         case '':
-          return setup.fileUtils.getFileData('undraw-content-team.png');
+          return fileUtils.getFileData('undraw-content-team.png');
         default:
           return null;
       };
@@ -25,9 +28,9 @@ async function importPageData() {
           const getFeatureMedia = (featureIndex) => {
             switch (featureIndex) {
               case 0:
-                return setup.getFileData('undraw-design-page.svg');
+                return fileUtils.getFileData('undraw-design-page.svg');
               case 1:
-                return setup.getFileData('undraw-create-page.svg');
+                return fileUtils.getFileData('undraw-create-page.svg');
               default:
                 return null;
             }
@@ -39,11 +42,11 @@ async function importPageData() {
           const getFeatureMedia = (featureIndex) => {
             switch (featureIndex) {
               case 0:
-                return setup.fileUtils.getFileData('preview.svg');
+                return fileUtils.getFileData('preview.svg');
               case 1:
-                return setup.fileUtils.getFileData('devices.svg');
+                return fileUtils.getFileData('devices.svg');
               case 2:
-                return setup.fileUtils.getFileData('palette.svg');
+                return fileUtils.getFileData('palette.svg');
               default:
                 return null;
             }
@@ -61,9 +64,8 @@ async function importPageData() {
           });
         }
       });
-      await setup.createEntry('page', page, files);
+      await createEntry('page', page, files);
     });
   }
 
-exports.importPageData = importPageData;
-
+module.exports = importPageData;

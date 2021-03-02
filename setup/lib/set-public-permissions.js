@@ -31,4 +31,4 @@ async function setPublicPermissions(strapi, newPermissions) {
     await Promise.all(updatePromises);
   }
 
-  exports.setPublicPermissions = setPublicPermissions;
+  module.exports = setPublicPermissions;

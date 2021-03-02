@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-exports.fileUtils = {
+module.exports = {
   getFileSizeInBytes: function (filePath) {
     const stats = fs.statSync(filePath);
     const fileSizeInBytes = stats["size"];

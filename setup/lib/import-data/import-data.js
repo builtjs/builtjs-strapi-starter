@@ -1,13 +1,16 @@
-const setup = require('./../../../setup/lib');
+const importPageData = require('./import-page-data');
+const importGlobalData = require('./import-global-data');
+const setPublicPermissions = require('./../set-public-permissions');
+
 const permissions = require('./../../data/permissions');
 
 async function importData(strapi) {
     // Allow read of application content types
-    await setup.setPublicPermissions(strapi, permissions);
+    await setPublicPermissions(strapi, permissions);
     
     // Create all entries
-    await setup.importGlobalData();
-    await setup.importPageData();
+    await importGlobalData();
+    await importPageData();
   };
 
-exports.importData = importData;
+module.exports = importData;
