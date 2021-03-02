@@ -10,7 +10,7 @@ async function importGlobalData() {
       'footer.logo': fileUtils.getFileData('logo.png'),
     };
     // Create entry
-    await createEntry('global', global, files);
+    await createEntry(strapi, 'global', global, files);
   }
 
   module.exports = importGlobalData;

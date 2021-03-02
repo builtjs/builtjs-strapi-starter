@@ -9,8 +9,8 @@ async function importData(strapi) {
     await setPublicPermissions(strapi, permissions);
     
     // Create all entries
-    await importGlobalData();
-    await importPageData();
+    // await importGlobalData(strapi);
+    await importPageData(strapi);
   };
 
 module.exports = importData;
